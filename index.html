@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hug Machine — hold me tight</title>
+  <meta name="description" content="A hug button for Mena — squeeze it, hold it, send one back to Ammar.">
+  <meta property="og:title" content="Hug Machine — hold me tight">
+  <meta property="og:description" content="A hug button for Mena — squeeze it, hold it, send one back to Ammar.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#faf7f5">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="hug">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="https://menaammarpro.github.io/">All projects</a>
+        <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
+        <a href="https://menaammarpro.github.io/loveformymena/">Letters</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Emergency only</p>
+      <h1>Hug machine</h1>
+      <p class="subtitle">Press for a squeeze. Hold for the real thing.</p>
+    </section>
+
+    <p id="sent-note" class="sent-note" hidden></p>
+
+    <section class="hug-stage">
+      <button id="hug-btn" class="hug-btn" type="button" aria-label="Hug me">
+        <span class="hug-arms" aria-hidden="true">&#129303;</span>
+        <span class="hug-word">hug me</span>
+      </button>
+      <div class="warmth">
+        <div class="warmth-track">
+          <div id="warmth-fill" class="warmth-fill"></div>
+        </div>
+        <p id="warmth-label" class="warmth-label">&nbsp;</p>
+      </div>
+      <p id="hug-message" class="hug-message">&nbsp;</p>
+    </section>
+
+    <section class="stats-row">
+      <div class="stat-card">
+        <span class="stat-num" id="hug-count">0</span>
+        <span class="stat-label">squeezes</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="longest-hold">0s</span>
+        <span class="stat-label">longest hold</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="last-hug">never</span>
+        <span class="stat-label">last hug</span>
+      </div>
+    </section>
+
+    <section class="panel send-panel">
+      <h2>Send one to Ammar</h2>
+      <p>Press the button and this page mails itself to him &mdash; when he opens
+        the link, the machine starts on its own.</p>
+      <button id="share-hug" class="btn btn-primary" type="button">Copy a hug link</button>
+      <p id="share-note" class="share-note">&nbsp;</p>
+    </section>
+
+    <section class="panel info-panel">
+      <h2>How to use your machine</h2>
+      <ul>
+        <li><strong>Squeeze</strong> &mdash; one press, one little burst of love.</li>
+        <li><strong>Hold</strong> &mdash; keep it pressed; the longer you hold, the bigger the hug. Eight seconds is the full bear hug.</li>
+        <li><strong>Share</strong> &mdash; copy the link, send it over, and he gets the same hug you just felt.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+      <p class="footer-note">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
