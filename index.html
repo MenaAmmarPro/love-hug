@@ -8,7 +8,7 @@
   <meta property="og:title" content="Hug Machine — hold me tight">
   <meta property="og:description" content="A hug button for Mena — squeeze it, hold it, send one back to Ammar.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#faf7f5">
+  <meta name="theme-color" content="#090b20">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -16,21 +16,23 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-page="hug">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="https://menaammarpro.github.io/">All projects</a>
-        <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
-        <a href="https://menaammarpro.github.io/loveformymena/">Letters</a>
-      </nav>
-    </div>
+    <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="https://menaammarpro.github.io/">All projects</a>
+      <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
+      <a href="https://menaammarpro.github.io/loveformymena/">Letters</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
   </header>
 
-  <main class="container">
+  <main>
     <section class="hero">
       <p class="eyebrow">Emergency only</p>
-      <h1>Hug machine</h1>
+      <h1>Hug <span>machine</span></h1>
       <p class="subtitle">Press for a squeeze. Hold for the real thing.</p>
     </section>
 
@@ -69,7 +71,7 @@
       <h2>Send one to Ammar</h2>
       <p>Press the button and this page mails itself to him &mdash; when he opens
         the link, the machine starts on its own.</p>
-      <button id="share-hug" class="btn btn-primary" type="button">Copy a hug link</button>
+      <button id="share-hug" class="button button-primary" type="button">Copy a hug link</button>
       <p id="share-note" class="share-note">&nbsp;</p>
     </section>
 
@@ -84,10 +86,8 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
-      <p class="footer-note">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
-    </div>
+    <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+    <p class="footer-small">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
   </footer>
 
   <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
