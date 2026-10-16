@@ -1,6 +1,8 @@
 /* love-hug — page styles on top of the shared love theme */
 
-main.container {
+main {
+  width: min(1000px, calc(100% - 40px));
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
@@ -8,29 +10,32 @@ main.container {
 }
 
 .hero {
+  min-height: auto;
   text-align: center;
-  padding: 2rem 1rem 0;
+  padding: 2.4rem 1rem 0;
 }
 
 .eyebrow {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: var(--muted, #8a847e);
+  color: var(--pink);
   margin: 0 0 0.4rem;
 }
 
 .hero h1 { margin: 0 0 0.4rem; }
 
-.subtitle { margin: 0; color: var(--muted, #8a847e); }
+.subtitle { margin: 0; color: var(--muted); }
 
 .sent-note {
   text-align: center;
-  background: #eadfce;
+  background: rgba(255, 159, 207, 0.14);
+  border: 1px solid var(--pink-strong);
   border-radius: 999px;
   padding: 0.55rem 1rem;
   margin: 0 auto;
   max-width: 28rem;
+  color: var(--text);
 }
 
 /* ---------- the machine ---------- */
@@ -48,8 +53,8 @@ main.container {
   height: 11rem;
   border-radius: 50%;
   border: none;
-  background: radial-gradient(circle at 32% 28%, #fff 0%, #eadfce 55%, #dcc9b2 100%);
-  box-shadow: 0 18px 40px rgba(90, 60, 40, 0.22);
+  background: radial-gradient(circle at 32% 28%, #ffd9ec 0%, #ff9fcf 55%, #b8327d 100%);
+  box-shadow: 0 18px 40px rgba(184, 50, 125, 0.35);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -66,7 +71,7 @@ main.container {
 
 .hug-btn.holding {
   transform: scale(0.94);
-  box-shadow: 0 8px 18px rgba(90, 60, 40, 0.3);
+  box-shadow: 0 8px 18px rgba(184, 50, 125, 0.5);
 }
 
 .hug-btn.squeezed { animation: squeeze-pop 0.45s ease; }
@@ -83,7 +88,7 @@ main.container {
   font-size: 0.95rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6f6459;
+  color: #3a0f28;
 }
 
 .warmth {
@@ -93,7 +98,7 @@ main.container {
 .warmth-track {
   height: 10px;
   border-radius: 999px;
-  background: var(--line, #ece6e0);
+  background: var(--line);
   overflow: hidden;
 }
 
@@ -101,14 +106,14 @@ main.container {
   height: 100%;
   width: 0%;
   border-radius: 999px;
-  background: linear-gradient(90deg, #eadfce, #d8a7a1);
+  background: linear-gradient(90deg, #ff9fcf, #ff72b8);
   transition: width 0.12s linear;
 }
 
 .warmth-label {
   text-align: center;
   font-size: 0.8rem;
-  color: var(--muted, #8a847e);
+  color: var(--muted);
   margin: 0.35rem 0 0;
   min-height: 1.1em;
 }
@@ -118,6 +123,7 @@ main.container {
   font-size: 1.1rem;
   min-height: 1.4em;
   margin: 0;
+  color: var(--text);
 }
 
 /* ---------- stats ---------- */
@@ -132,8 +138,8 @@ main.container {
 }
 
 .stat-card {
-  background: var(--card, #fff);
-  border: 1px solid var(--line, #ece6e0);
+  background: var(--panel);
+  border: 1px solid var(--line);
   border-radius: 16px;
   padding: 0.8rem 0.6rem;
   text-align: center;
@@ -145,6 +151,7 @@ main.container {
 .stat-num {
   font-size: 1.3rem;
   font-weight: 700;
+  color: var(--text);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -152,23 +159,24 @@ main.container {
 
 .stat-label {
   font-size: 0.75rem;
-  color: var(--muted, #8a847e);
+  color: var(--muted);
 }
 
 /* ---------- panels ---------- */
 
 .panel {
-  background: var(--card, #fff);
-  border: 1px solid var(--line, #ece6e0);
+  background: var(--panel);
+  border: 1px solid var(--line);
   border-radius: 18px;
   padding: 1.2rem 1.4rem;
+  box-shadow: var(--shadow);
   max-width: 32rem;
   margin: 0 auto;
   width: 100%;
 }
 
 .panel h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
-.panel p { color: var(--muted, #8a847e); margin: 0.4rem 0 0.8rem; }
+.panel p { color: var(--muted); margin: 0.4rem 0 0.8rem; }
 
 .share-note {
   min-height: 1.2em;
@@ -178,9 +186,11 @@ main.container {
 .info-panel ul {
   margin: 0.3rem 0 0;
   padding-left: 1.2rem;
-  color: var(--muted, #8a847e);
+  color: var(--muted);
   line-height: 1.6;
 }
+
+.info-panel strong { color: var(--text); }
 
 @media (max-width: 480px) {
   .hug-btn { width: 9.5rem; height: 9.5rem; }
